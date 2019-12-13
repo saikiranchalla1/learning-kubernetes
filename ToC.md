@@ -1,5 +1,4 @@
-# Part - 1
-# Introduction to Docker
+# Part - 1: Introduction to Docker
 1. Running your first docker container
 2. Deploying a static website to the container
 3. Building container images
@@ -15,8 +14,7 @@
 13. Monitoring containers with Prometheus
 14. Using Grafana with Prometheus for Alerting and Monitoring
 
-# Part - 2
-# Spinning Up a K8s Cluster
+# Part - 2: Spinning Up a K8s Cluster
 ## Getting Started
 1. Architecture of Kubernetes Cluster
 2. Client Tools
@@ -96,8 +94,7 @@
 8. Smoke testing Cleanup
 9. Lab: SMoke testing a kubernetes Cluster
 
-# Part - 2
-# Certified Kubernetes Application Developer (CKAD)
+# Part - 3: Certified Kubernetes Application Developer (CKAD)
 ## Core Concepts
 1. Architecture
 2. PODs and PODs with YAML
@@ -147,8 +144,7 @@
 
 ## Certification Tips
 
-# Part - 3
-# Monitoring K8s with Prometheus and Grafana
+# Part - 4: Monitoring K8s with Prometheus and Grafana
 ## Prometheus Architecture
 1. Client Libraries
 2. Exporters
@@ -175,8 +171,7 @@
 1. Alertmanager
 2. Alerting rules
 
-# Part - 4
-# Helm, KNative, OPA, Vault
+# Part - 5: Helm, KNative, OPA, Vault
 ## Helm
 1. What is Helm
 2. Package Management in K8s

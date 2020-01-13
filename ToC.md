@@ -181,7 +181,7 @@
 
 ## KNative
 1. Install knative
-2. Deploy and App with Knative
+2. Deploy an App with Knative
 
 ## Vault
 1. Installing Vault

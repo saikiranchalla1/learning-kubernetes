@@ -10,9 +10,6 @@
 9. Persistent Data Volumes
 10. Container Logging
 11. Adding Metadata and Labels
-12. Load balancing Containers
-13. Monitoring containers with Prometheus
-14. Using Grafana with Prometheus for Alerting and Monitoring
 
 # Part - 2: Spinning Up a K8s Cluster
 ## Getting Started

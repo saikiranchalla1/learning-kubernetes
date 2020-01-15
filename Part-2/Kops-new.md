@@ -56,7 +56,7 @@ Namecheap.com often has promotions for tld’s like .co for just a couple of buc
 - Once you have a domain name, create a hosted zone as below:
   - Navigigte to Route53 and select Hosted Zones
   - Click on "Create Hosted Zone"
-  - Domain name: kubernetes.<DOMAIN NAME> (for example kubernetes.newtech.academy)
+  - Domain name: kubernetes.<DOMAIN NAME> (for example kubernetes-charter.com)
   - Click next.
   - Now we need to use the NS values to configure our domain.
   - If you used NameCheap follow the steps below:
@@ -86,17 +86,17 @@ Or use a packaged version for your OS: see https://kubernetes.io/docs/tasks/tool
 - Create a K8s cluster using the command below
 
 ```
-kops create cluster --name=kubernetes.newtech.academy --state=s3://kops-state-b429b --zones=eu-west-1a --node-count=2 --node-size=t2.micro --master-size=t2.micro --dns-zone=kubernetes.newtech.academy
+kops create cluster --name=kubernetes-charter.com --state=s3://kops-state-csks --zones=eu-west-1a --node-count=2 --node-size=t2.micro --master-size=t2.micro --dns-zone=kubernetes-charter.com
 ```
 - This will output the resources that will be created in AWS for the purposes of the Cluster.
 - in order to continue creating the cluster, execute the following:
 ```
-kops update cluster kubernetes.newtech.academy --yes --state=s3://kops-state-b429b
+kops update cluster kubernetes-charter.com --yes --state=s3://kops-state-csks
 ```
 - The above command creates a config file. Use CAT command to inspect the config file.
 - Execute `kubectl get nodes` to determine the status of the nodes.
 - Sanity test the new cluster by executing `kubectl run helloworld --image=k8s.gcr.io/echoserver:1.4 --port 8080` and run `kubectl get pods`.
-- Expose the above POD using a NodePort service using `kubectl export deployment helloworld --type=NodePort` and run `kubectl get svc`
+- Expose the above POD using a NodePort service using `kubectl expose deployment helloworld --type=NodePort` and run `kubectl get svc`
 - Edit the Inbound policy for the Security group to allow communication from your IP to the Port exposed by the service above.
   - Custom TCP - TCP - My IP address
   - Save the SG
@@ -104,9 +104,9 @@ kops update cluster kubernetes.newtech.academy --yes --state=s3://kops-state-b42
 - Run `curl <MASTER_IP>:<NODE_PORT>` to check the helloworld deployment is accessible outside the cluster.
 - Clean up by deleting the cluster as below:
 ```
-kops delete cluster --name kubernetes.newtech.academy --state=s3://kops-state-b429b
+kops delete cluster --name kubernetes-charter.com --state=s3://kops-state-csks
 
-kops delete cluster --name kubernetes.newtech.academy --state=s3://kops-state-b429b --yes
+kops delete cluster --name kubernetes-charter.com --state=s3://kops-state-csks --yes
 
 ```
 

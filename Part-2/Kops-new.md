@@ -86,7 +86,7 @@ Or use a packaged version for your OS: see https://kubernetes.io/docs/tasks/tool
 - Create a K8s cluster using the command below
 
 ```
-kops create cluster --name=kubernetes-charter.com --state=s3://kops-state-csks --zones=eu-west-1a --node-count=2 --node-size=t2.micro --master-size=t2.micro --dns-zone=kubernetes-charter.com
+kops create cluster --name=kubernetes-charter.com --state=s3://kops-state-cskss --zones=us-east-1a --node-count=2 --node-size=t2.medium --master-size=t2.medium --dns-zone=kubernetes-charter.com
 ```
 - This will output the resources that will be created in AWS for the purposes of the Cluster.
 - in order to continue creating the cluster, execute the following:
